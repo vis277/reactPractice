@@ -7,6 +7,10 @@ const[Lname,setLname]=useState("Kumar");
 const[Counter,setCounter]=useState(0);
 const[FirstNumber,setFirstNumber]=useState(null);
 const[SecondNumber,setSecoundNumber]=useState(null);
+const[btnSum,setbtnSum]=useState(null);
+const[btnSub,setbtnSub]=useState(null);
+const[btnMul,setbtnMul]=useState(null);
+const[btnDiv,setbtnDiv]=useState(null);
 
 
 
@@ -23,16 +27,16 @@ const[SecondNumber,setSecoundNumber]=useState(null);
          <span>Input Second Number</span><input type="text'" value={SecondNumber} onChange={(e)=>setSecoundNumber(e.target.value)}/>
          </p>
          <p>
-            <button>Sum</button> <span>{+FirstNumber+(+SecondNumber)}</span>
+            <button onClick={()=>{setbtnSum(+FirstNumber+(+SecondNumber))}}>Sum</button> <span>{btnSum}</span>
          </p>
          <p>
-            <button >Difference</button> <span>{FirstNumber-(SecondNumber)}</span>
+            <button onClick={()=>{setbtnSub(FirstNumber-SecondNumber)}}>Difference</button> <span>{btnSub}</span>
          </p>
          <p>
-            <button >Product</button> <span>{FirstNumber*(SecondNumber)}</span>
+            <button  onClick={()=>{setbtnMul(FirstNumber*SecondNumber)}}>Product</button> <span>{btnMul}</span>
          </p>
          <p>
-            <button >Division</button> <span>{FirstNumber/(SecondNumber)}</span>
+            <button onClick={()=>{setbtnDiv(FirstNumber/SecondNumber)}} >Division</button> <span>{btnDiv}</span>
          </p>
         </>
        
